@@ -38,7 +38,7 @@ module DbReporter
             tmp << column.null
             tmp << column.limit
             if column.foreign_key
-              tmp << "[#{column.foreign_key[:to_table]}](#{column.foreign_key[:to_table]})"
+              tmp << "[#{column.foreign_key[:to_table]}](##{column.foreign_key[:to_table]})"
             else
               tmp << ''
             end
